@@ -1,0 +1,14 @@
+---
+applications:
+- name: futboljc
+  #env:
+  #  DISABLE_DATABASE_ENVIRONMENT_CHECK: 1
+  memory: 256M
+  instances: 1
+  path: .
+  stack: cflinuxfs2
+  buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
+  #command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  services:
+  - PostgreSQL-FJC
