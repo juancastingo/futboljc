@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :people
   root 'home#home'
   get 'home/home'
 
