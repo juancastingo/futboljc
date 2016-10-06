@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nr: 1
+  peopleAmount: 1
+  precio: 9.99
+  club_id: 1
+
+two:
+  nr: 1
+  peopleAmount: 1
+  precio: 9.99
+  club_id: 1
