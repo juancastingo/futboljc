@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Futboljc</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Futboljc</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+  <ul id="menu">
+    <li><%= link_to("Home", root_path ) %></li>
+    <li><%= link_to("People", people_path ) %></li>
+    <li><%= link_to("clubs", clubs_path ) %></li>
+    <li><%= link_to("fields", fields_path ) %></li>
+    <li><%= link_to("events", events_path ) %></li>
+  </ul>
+  <%= yield %>
+</body>
 </html>
