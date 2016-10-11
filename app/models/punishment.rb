@@ -1,3 +1,4 @@
 class Punishment < ApplicationRecord
-  has_and_belongs_to_many :people
+  has_many :people, through: :person_punishments
+  has_many :person_punishments
 end
