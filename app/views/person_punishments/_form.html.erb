@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :punishment_id %>
-    <%= f.number_field :punishment_id %>
-  </div>
 
   <div class="field">
     <%= f.label :person_id %>
-    <%= f.text_field :person_id %>
+    <%= collection_select(:field, :person_id, Person.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :punishment %>
+    <%= collection_select(:field, :punishment_id, Punishment.all, :id, :name) %>
   </div>
 
   <div class="actions">
