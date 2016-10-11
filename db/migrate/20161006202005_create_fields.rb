@@ -3,6 +3,7 @@ class CreateFields < ActiveRecord::Migration[5.0]
     create_table :fields do |t|
       t.integer :nr
       t.integer :peopleAmount
+      t.string :comment
       t.decimal :precio
       t.integer :club_id
 

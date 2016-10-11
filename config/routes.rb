@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :punishments
   resources :events
-  resources :fields
-  resources :clubs
   resources :people
+  resources :fields
+  resources :events
+  resources :clubs
   root 'home#home'
   get 'home/home'
 

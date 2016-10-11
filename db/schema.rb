@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20161011152035) do
   create_table "fields", force: :cascade do |t|
     t.integer  "nr"
     t.integer  "peopleAmount"
+    t.string   "comment"
     t.decimal  "precio"
     t.integer  "club_id"
     t.datetime "created_at",   null: false
@@ -40,6 +41,14 @@ ActiveRecord::Schema.define(version: 20161011152035) do
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.integer  "puntation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "person_events", force: :cascade do |t|
+    t.integer  "person_id"
+    t.integer  "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

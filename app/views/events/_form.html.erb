@@ -26,6 +26,16 @@
     <%= f.number_field :field_id %>
   </div>
 
+  <div class="field">
+    <%= f.label :club %>
+    <%= collection_select(:field, :club_id, Club.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :field %>
+    <%= collection_select(:event, :field_id, Field.all, :id, :comment) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
