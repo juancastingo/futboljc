@@ -7,6 +7,7 @@
     <tr>
       <th>Nr</th>
       <th>Peopleamount</th>
+      <th>Comment</th>
       <th>Precio</th>
       <th>Club</th>
       <th colspan="3"></th>
@@ -18,8 +19,9 @@
       <tr>
         <td><%= field.nr %></td>
         <td><%= field.peopleAmount %></td>
+        <td><%= field.comment %></td>
         <td><%= field.precio %></td>
-        <td><%= field.club_id %></td>
+        <td><%= field.club.name %></td>
         <td><%= link_to 'Show', field %></td>
         <td><%= link_to 'Edit', edit_field_path(field) %></td>
         <td><%= link_to 'Destroy', field, method: :delete, data: { confirm: 'Are you sure?' } %></td>

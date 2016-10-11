@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :events
-  resources :fields
-  resources :clubs
   resources :people
+  resources :fields
+  resources :events
+  resources :clubs
   root 'home#home'
   get 'home/home'
 

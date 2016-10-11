@@ -3,11 +3,13 @@
 one:
   nr: 1
   peopleAmount: 1
+  comment: MyString
   precio: 9.99
   club_id: 1
 
 two:
   nr: 1
   peopleAmount: 1
+  comment: MyString
   precio: 9.99
   club_id: 1

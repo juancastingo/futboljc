@@ -17,7 +17,7 @@ class FieldsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create field" do
     assert_difference('Field.count') do
-      post fields_url, params: { field: { club_id: @field.club_id, nr: @field.nr, peopleAmount: @field.peopleAmount, precio: @field.precio } }
+      post fields_url, params: { field: { club_id: @field.club_id, comment: @field.comment, nr: @field.nr, peopleAmount: @field.peopleAmount, precio: @field.precio } }
     end
 
     assert_redirected_to field_url(Field.last)
@@ -34,7 +34,7 @@ class FieldsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update field" do
-    patch field_url(@field), params: { field: { club_id: @field.club_id, nr: @field.nr, peopleAmount: @field.peopleAmount, precio: @field.precio } }
+    patch field_url(@field), params: { field: { club_id: @field.club_id, comment: @field.comment, nr: @field.nr, peopleAmount: @field.peopleAmount, precio: @field.precio } }
     assert_redirected_to field_url(@field)
   end
 
