@@ -61,6 +61,34 @@ class ClubsController < ApplicationController
     end
   end
 
+
+  # AJAX
+  def select_update
+    club_nr = params[:ClubID]
+    #club = Club.find(club_nr)
+
+    #if pass == pedido.password or pedido.password == nil
+    #  cookies.signed[:pedido_id] = ped_nr
+    #  redirect_to root_path
+    #else
+      #return render json: club.to_json
+    #@fields = Field.find_by(club_id: club_nr)
+    @fields = Field.all.where(club_id: club_nr)
+    Rails.logger.debug @fields
+      #render "view", :clubs => @clubs
+    #end
+    respond_to do |format|
+      format.json { render json: @fields }
+    end
+    #format.json { render json: 'hola'.to_json}
+
+    #redirect_to root_path
+    #respond_to do |format|
+    #  format.json { render json: 'hola'.to_json}
+    #end
+    #return render json: 1.to_json;
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_club
