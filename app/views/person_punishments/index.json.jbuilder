@@ -1,0 +1,1 @@
+json.array! @person_punishments, partial: 'person_punishments/person_punishment', as: :person_punishment

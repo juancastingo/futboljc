@@ -1,0 +1,27 @@
+<%= form_for(person_punishment) do |f| %>
+  <% if person_punishment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person_punishment.errors.count, "error") %> prohibited this person_punishment from being saved:</h2>
+
+      <ul>
+      <% person_punishment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :punishment_id %>
+    <%= f.number_field :punishment_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :person_id %>
+    <%= f.text_field :person_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

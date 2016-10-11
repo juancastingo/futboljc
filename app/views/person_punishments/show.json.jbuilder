@@ -1,0 +1,1 @@
+json.partial! "person_punishments/person_punishment", person_punishment: @person_punishment

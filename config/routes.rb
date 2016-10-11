@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :person_punishments
   resources :punishments
   resources :events
   resources :people

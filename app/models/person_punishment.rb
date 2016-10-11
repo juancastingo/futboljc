@@ -1,0 +1,2 @@
+class PersonPunishment < ApplicationRecord
+end
