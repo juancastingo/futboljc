@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @punishment.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @punishment.description %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @punishment.points %>
+</p>
+
+<%= link_to 'Edit', edit_punishment_path(@punishment) %> |
+<%= link_to 'Back', punishments_path %>

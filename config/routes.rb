@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :punishments
   resources :events
   resources :fields
   resources :clubs
